@@ -121,6 +121,7 @@ def _bookmark_save(request, form):
     # Create/get bookmark.
     try:
         print >> sys.stderr, 'Find bookmark...'
+        print >> sys.stderr, 'User: %s' %request.user
         bookmark = Bookmark.objects.get(
             user=request.user,
             link=link

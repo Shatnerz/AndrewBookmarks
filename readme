@@ -22,10 +22,13 @@ You should be able to follow links around.
 Register to create a user or sign in as admin.
 Click on your username in the nav bar to manage bookmarks.
 
+Run Test cases
+run 'python manage.py test'
+
 
 TODO:
 -Move all views to class based views
--Add test cases
+-Add more test cases
 
 BUGS:
 -editting an existing url creates a new bookmarks and leaves the old bookmark
