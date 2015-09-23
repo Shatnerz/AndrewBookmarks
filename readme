@@ -1,0 +1,31 @@
+AndrewBookmarks
+Django1.8
+Python2.7
+Sept 22, 2015
+
+Simple Django app to manage bookmarks
+
+Brief overview of structure
+~/ - displays main page
+~/bookmarks/ - displays main page
+~/bookmarks/user/"USERNAME" - displays bookmarks belonging to a user
+	If user is logged in, user can edit
+~/bookmarks/user - search your bookmarks if logged in
+A nav bar should be available in the top right with links to home, login, register, logout (if logged in), and USERNAME's bookmarks (if logged in)
+
+Running Test server
+run 'python manage.py runserver'
+Server at http://127.0.0.1:8000/
+admin login: admin
+admin password: admin
+You should be able to follow links around.
+Register to create a user or sign in as admin.
+Click on your username in the nav bar to manage bookmarks.
+
+
+TODO:
+-Move all views to class based views
+-Add test cases
+
+BUGS:
+-editting an existing url creates a new bookmarks and leaves the old bookmark

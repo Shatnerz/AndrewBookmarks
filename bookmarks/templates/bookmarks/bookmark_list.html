@@ -1,0 +1,26 @@
+{% if bookmarks %}
+	<ul class="bookmarks">
+		{% for bookmark in bookmarks %}
+			<li>
+				<a href="{{ bookmark.link.url }}" class="title">
+					{{ bookmark.title }}</a>
+				{% if show_edit %}
+					<a href="/bookmarks/save/?url={{ bookmark.link.url|urlencode }}"
+						class="edit">[edit]</a>
+					<a href="/bookmarks/delete/?url={{ bookmark.link.url|urlencode }}"
+						class="delete">[delete]</a>
+				{% endif %}
+				{% if show_description %}
+					{% if bookmark.description %}
+						<br />
+						{{ bookmark.description }}
+						<br />
+					{% else %}
+					{% endif %}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No bookmarks found.</p>
+{% endif %}

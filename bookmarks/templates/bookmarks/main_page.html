@@ -1,0 +1,11 @@
+{% extends "bookmarks/base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block head %}Welcome to AndrewBookmarks!{% endblock %}
+{% block content %}
+	{% if user.username %}
+		<p>Welcome {{ user.username }}!</p>
+	{% else %}
+		<p>Welcome!</p>
+		<p><a href="/bookmarks/login/">login</a></p>
+	{% endif %}
+{% endblock %}

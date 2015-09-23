@@ -1,0 +1,6 @@
+{% extends "bookmarks/base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %}{{ username }}'s Bookmarks{% endblock %}
+{% block content %}
+	{% include "bookmarks/bookmark_list.html" %}
+{% endblock %}
